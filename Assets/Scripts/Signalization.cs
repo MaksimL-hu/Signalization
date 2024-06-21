@@ -20,10 +20,10 @@ public class Signalization : MonoBehaviour
         if (_playingCoroutine != null)
             StopCoroutine(_playingCoroutine);
 
-        _playingCoroutine = StartCoroutine(Playing(isPlay));
+        _playingCoroutine = StartCoroutine(SwitchSmooth(isPlay));
     }
 
-    private IEnumerator Playing(bool isPlay)
+    private IEnumerator SwitchSmooth(bool isPlay)
     {
         int volume = Convert.ToInt32(isPlay);
 
